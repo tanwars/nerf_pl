@@ -60,7 +60,7 @@ def extract_model_state_dict(ckpt_path, model_name='model', prefixes_to_ignore=[
     for k, v in checkpoint.items():
         if not k.startswith(model_name):
             continue
-        k = k[len(model_name)+1:]
+        # k = k[len(model_name)+1:]
         for prefix in prefixes_to_ignore:
             if k.startswith(prefix):
                 print('ignore', k)
